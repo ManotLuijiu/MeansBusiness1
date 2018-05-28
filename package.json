@@ -6,11 +6,6 @@
   "scripts": {
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://manotlj@bitbucket.org/manotlj/meansbusiness.git"
-  },
-  "homepage": "https://means-business.com",
   "author": "Manot Luijiu",
   "license": "MIT",
   "dependencies": {
