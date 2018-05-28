@@ -1,0 +1,51 @@
+const LocalStrategy = require('passport-local').Strategy;
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+const salt = bcrypt.genSaltSync(10);
+const hash = bcrypt.hashSync("123456", salt);
+
+
+// Load user model
+const User = mongoose.model('users');
+
+module.exports = function (passport) {
+  passport.use(new LocalStrategy({
+    usernameField: 'email'
+  }, (email, password, done) => {
+    // Match user
+    User.findOne({
+      email
+    }).then(user => {
+      if (!user) {
+        return done(null, false, {
+          message: 'No User Found'
+        });
+      }
+
+      // Match password
+      bcrypt.compare(password, user.password, (err, isMatch) => {
+        // console.log(hash);
+        // console.log(password);
+        // console.log(user.password);
+        if (err) throw err;
+        if (isMatch) {
+          return done(null, user);
+        } else {
+          return done(null, false, {
+            message: 'Password incorrect'
+          });
+        }
+      })
+    })
+  }));
+
+  passport.serializeUser(function (user, done) {
+    done(null, user.id);
+  });
+
+  passport.deserializeUser(function (id, done) {
+    User.findById(id, function (err, user) {
+      done(err, user);
+    });
+  });
+}

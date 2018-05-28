@@ -1,0 +1,43 @@
+{
+  "name": "meansbusiness",
+  "version": "1.0.0",
+  "description": "Means Business Web Apps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://manotlj@bitbucket.org/manotlj/meansbusiness.git"
+  },
+  "homepage": "https://means-business.com",
+  "author": "Manot Luijiu",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
+    "connect-flash": "^0.1.1",
+    "dialogflow": "^4.0.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-vue": "^5.6.5",
+    "handlebars": "^4.0.11",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.1.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/node": "^7.0.0-beta.49",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.8.2",
+    "webpack": "^4.9.1"
+  }
+}

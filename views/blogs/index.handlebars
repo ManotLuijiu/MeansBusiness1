@@ -1,0 +1,21 @@
+{{#each blogs}}
+<div class="container">
+  <div class="row">
+    <div class="card card-body mb-2">
+      <h4>{{title}}</h4>
+      <p>{{details}}</p>
+      <div class="row">
+        <a class="btn btn-secondary mr-2" style="width: 100px;" href="/blogs/edit/{{id}}">EDIT</a>
+        <form action="/blogs/{{id}}?_method=DELETE" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <input class="btn btn-danger" style="width: 100px;" type="submit" value="DELETE">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{else}}
+<p>No blog listed.</p>
+
+{{/each}}
