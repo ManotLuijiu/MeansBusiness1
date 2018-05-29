@@ -2,13 +2,16 @@
   "name": "meansbusiness",
   "version": "1.0.0",
   "description": "Means Business Web Apps",
-  "main": "app.js",
+  "main": "lambda.js",
   "scripts": {
-    "start": "node app.js"
+    "deploy": "claudia create --handler lambda.handler --deploy-proxy-api --region ap-northeast-1",
+    "update": "claudia update",
+    "generate-proxy": "claudia generate-serverless-express-proxy --express-module app"
   },
   "author": "Manot Luijiu",
   "license": "MIT",
   "dependencies": {
+    "aws-serverless-express": "^3.2.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",

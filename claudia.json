@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "meansbusiness-executor",
+    "name": "meansbusiness",
+    "region": "ap-northeast-1"
+  },
+  "api": {
+    "id": "8aikrwrs2g"
+  }
+}
