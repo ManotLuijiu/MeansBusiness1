@@ -1,8 +1,33 @@
+:root {
+  --azure: #FEFFFF;
+  --summer-sky: #41CEF2;
+  --pattens-blue: #D2E1EC;
+  --waikawa-grey: #62799C;
+  --macaroni-and-cheese: #FDB477;
+  --polo-blue: #7BA1CE;
+}
+
 body {
-  background-image: url(/assets/images/345.jpg);
-  position: relative;
-  height: 720px;
-  width: 100%;
+  background-color: #feffff;
+}
+
+body::after {
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.navbar {
+  opacity: 0.9;
+}
+
+.card {
+  border-radius: 25px;
+  margin-top: 100px;
 }
 
 .logo {
